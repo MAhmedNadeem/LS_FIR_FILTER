@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../LS_FIR_FILTER.srcs/sources_1/new/fir_symmetric_pipelined.sv" \
+"../../../../LS_FIR_FILTER.srcs/sim_1/new/tb_fir_symmetric_pipelined.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,21 @@
+# --- C/C++ Compiled Artifacts ---
+*.o
+*.obj
+*.out
+*.exe
+*.app
+*.so
+*.dll
+*.dylib
+
+# --- Vitis / Eclipse IDE C++ Cache ---
+.settings/
+.project
+.cproject
+Debug/
+Release/
+bin/
+obj/
+
+# --- High-Level Synthesis (HLS) Builds ---
+*_prj/

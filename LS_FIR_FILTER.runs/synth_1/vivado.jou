@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Sep  7 21:07:55 2026
+# Process ID: 22652
+# Current directory: D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1
+# Command line: vivado.exe -log fir_symmetric_pipelined.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir_symmetric_pipelined.tcl
+# Log file: D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1/fir_symmetric_pipelined.vds
+# Journal file: D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source fir_symmetric_pipelined.tcl -notrace
