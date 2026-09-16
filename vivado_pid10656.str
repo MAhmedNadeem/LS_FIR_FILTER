@@ -747,3 +747,4 @@ selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fir_sym
 selectCodeEditor("fir_symmetric_pipelined.sv", 306, 65); // ce (w, ck)
 selectCodeEditor("fir_symmetric_pipelined.sv", 258, 71); // ce (w, ck)
 selectCodeEditor("fir_symmetric_pipelined.sv", 208, 162); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,058 MB. GUI used memory: 52 MB. Current time: 9/17/26 12:56:01 AM PKT
