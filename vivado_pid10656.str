@@ -1,0 +1,670 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 10656
+License: Customer
+
+Current time: 	Wed Sep 16 23:09:18 PKT 2026
+Time zone: 	Pakistan Time (Asia/Karachi)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 22 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Vivado/2018.2/tps/win64/jre
+Java executable location: 	D:/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	rosha
+User home directory: C:/Users/rosha
+User working directory: D:/Vivado _projects/LS_FIR_FILTER
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2018.2
+RDI_DATADIR: D:/Vivado/2018.2/data
+RDI_BINDIR: D:/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/rosha/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/rosha/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/rosha/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	D:/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/Vivado _projects/LS_FIR_FILTER/vivado.log
+Vivado journal file location: 	D:/Vivado _projects/LS_FIR_FILTER/vivado.jou
+Engine tmp dir: 	D:/Vivado _projects/LS_FIR_FILTER/.Xil/Vivado-10656-RoshaanWasif
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: D:/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Vivado/2018.2
+XILINX_SDK: D:/SDK/2018.2
+XILINX_VIVADO: D:/Vivado/2018.2
+XILINX_VIVADO_HLS: D:/Vivado/2018.2
+
+
+GUI allocated memory:	194 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 499 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 63 MB (+63572kb) [00:00:22]
+// [Engine Memory]: 486 MB (+358341kb) [00:00:22]
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: D:\Vivado _projects\LS_FIR_FILTER\LS_FIR_FILTER.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 509 MB. GUI used memory: 35 MB. Current time: 9/16/26 11:09:20 PM PKT
+// Tcl Message: open_project {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 545 MB (+36344kb) [00:00:33]
+// [Engine Memory]: 577 MB (+5149kb) [00:00:37]
+// Project name: LS_FIR_FILTER; location: D:/Vivado _projects/LS_FIR_FILTER; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:16 . Memory (MB): peak = 818.617 ; gain = 88.305 
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 67 MB (+533kb) [00:06:04]
+// [GUI Memory]: 71 MB (+716kb) [00:12:57]
+// [GUI Memory]: 75 MB (+269kb) [00:13:12]
+// [GUI Memory]: 79 MB (+328kb) [00:22:00]
+// [GUI Memory]: 83 MB (+430kb) [00:27:12]
+// HMemoryUtils.trashcanNow. Engine heap size: 602 MB. GUI used memory: 39 MB. Current time: 9/16/26 11:39:22 PM PKT
+// Elapsed time: 2312 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN, "Add or create design sources"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "SystemVerilog", 2); // cl (Q, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "top"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 14 seconds
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: close [ open {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv}} 
+// I (ck): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (ck)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 1395ms to process. Increasing delay to 3000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 4, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 4, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("top.sv", 234, 172); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+typeControlKey((HResource) null, "top.sv", 'v'); // ce (w, ck)
+// [GUI Memory]: 90 MB (+3100kb) [00:39:40]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 13 seconds
+selectCodeEditor("top.sv", 167, 54); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("top.sv", 325, 58); // ce (w, ck)
+selectCodeEditor("top.sv", 166, 74); // ce (w, ck)
+selectCodeEditor("top.sv", 511, 74); // ce (w, ck)
+selectCodeEditor("top.sv", 547, 94); // ce (w, ck)
+selectCodeEditor("top.sv", 466, 109); // ce (w, ck)
+selectCodeEditor("top.sv", 222, 165); // ce (w, ck)
+selectCodeEditor("top.sv", 222, 165, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 222, 165); // ce (w, ck)
+selectCodeEditor("top.sv", 113, 144); // ce (w, ck)
+selectCodeEditor("top.sv", 115, 159); // ce (w, ck)
+selectCodeEditor("top.sv", 117, 176); // ce (w, ck)
+selectCodeEditor("top.sv", 159, 147); // ce (w, ck)
+selectCodeEditor("top.sv", 223, 173); // ce (w, ck)
+selectCodeEditor("top.sv", 223, 173, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 223, 173); // ce (w, ck)
+selectCodeEditor("top.sv", 174, 229); // ce (w, ck)
+selectCodeEditor("top.sv", 174, 229, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 174, 229); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("top.sv", 311, 179); // ce (w, ck)
+selectCodeEditor("top.sv", 311, 179, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 311, 179); // ce (w, ck)
+selectCodeEditor("top.sv", 448, 144); // ce (w, ck)
+selectCodeEditor("top.sv", 632, 190); // ce (w, ck)
+selectCodeEditor("top.sv", 459, 190); // ce (w, ck)
+selectCodeEditor("top.sv", 654, 191); // ce (w, ck)
+selectCodeEditor("top.sv", 424, 193); // ce (w, ck)
+selectCodeEditor("top.sv", 425, 193, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 426, 193); // ce (w, ck)
+selectCodeEditor("top.sv", 242, 249); // ce (w, ck)
+selectCodeEditor("top.sv", 243, 249, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 244, 249); // ce (w, ck)
+selectCodeEditor("top.sv", 298, 232); // ce (w, ck)
+selectCodeEditor("top.sv", 130, 125); // ce (w, ck)
+selectCodeEditor("top.sv", 130, 125, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 130, 125); // ce (w, ck)
+selectCodeEditor("top.sv", 168, 228); // ce (w, ck)
+selectCodeEditor("top.sv", 168, 228, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 168, 228); // ce (w, ck)
+selectCodeEditor("top.sv", 365, 193); // ce (w, ck)
+selectCodeEditor("top.sv", 365, 193, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 365, 193); // ce (w, ck)
+selectCodeEditor("top.sv", 72, 248); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 31 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("CANCEL", "Cancel"); // JButton (j, c)
+// 'h' command handler elapsed time: 3 seconds
+dismissDialog("Add Sources"); // c (ck)
+// Elapsed time: 50 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "Memory File", 4); // cl (Q, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, (String) null); // X (Q, F)
+// Elapsed time: 11 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "input_samples"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 22 seconds
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: close [ open {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/input_samples.mem} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/input_samples.mem}} 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File]", 5, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File]", 5, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, input_samples.mem]", 6, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, input_samples.mem]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, input_samples.mem]", 6, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Source File Properties..."); // ad (aj, ck)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, input_samples.mem]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, input_samples.mem]", 6, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("input_samples.mem", 266, 102); // ce (w, ck)
+selectCodeEditor("input_samples.mem", 178, 127); // ce (w, ck)
+typeControlKey((HResource) null, "input_samples.mem", 'v'); // ce (w, ck)
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.sv", 1); // k (j, ck)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 7, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 7, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 8, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 8, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 8, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 8, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 8, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 8, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 8, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 8, false, false, false, false, false, true); // B (D, ck) - Double Click
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // J
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 9, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 10, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 9); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 8, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 8, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 44 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// Tcl Command: 'file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1'
+// B (ck): Create Constraints File: addNotify
+// Tcl Message: file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1 
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, "constraints"); // X (C, B)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (B)
+dismissDialog("Create Constraints File"); // B (ck)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 14 seconds
+// Tcl Command: 'file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1'
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Command: 'file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new'
+// Tcl Message: file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1 
+// Tcl Message: file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new 
+// Tcl Command: 'file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new'
+// bx (ck):  Add Constraint  : addNotify
+// Tcl Message: file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new 
+// Tcl Command: 'file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new'
+// Tcl Message: file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new 
+// Tcl Command: 'file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new'
+// Tcl Message: file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new 
+// Tcl Command: 'file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1'
+// Tcl Message: file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1 
+// Tcl Message: file mkdir {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new} 
+// Tcl Message: close [ open {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new/constraints.xdc} w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 {{D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new/constraints.xdc}} 
+// [GUI Memory]: 95 MB (+735kb) [00:45:44]
+dismissDialog("Add Constraint"); // bx (ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 8, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 8, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraints.xdc]", 9, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraints.xdc]", 9, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("constraints.xdc", 107, 75); // ce (w, ck)
+typeControlKey((HResource) null, "constraints.xdc", 'v'); // ce (w, ck)
+selectCodeEditor("constraints.xdc", 612, 249); // ce (w, ck)
+selectCodeEditor("constraints.xdc", 611, 249); // ce (w, ck)
+selectCodeEditor("constraints.xdc", 631, 238); // ce (w, ck)
+selectCodeEditor("constraints.xdc", 601, 247); // ce (w, ck)
+selectCodeEditor("constraints.xdc", 610, 58); // ce (w, ck)
+selectCodeEditor("constraints.xdc", 608, 40); // ce (w, ck)
+selectCodeEditor("constraints.xdc", 219, 77); // ce (w, ck)
+selectCodeEditor("constraints.xdc", 219, 77, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("constraints.xdc", 219, 77); // ce (w, ck)
+selectCodeEditor("constraints.xdc", 133, 76); // ce (w, ck)
+selectCodeEditor("constraints.xdc", 132, 76, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("constraints.xdc", 132, 76); // ce (w, ck)
+selectCodeEditor("constraints.xdc", 31, 56); // ce (w, ck)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 162 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Sep 16 23:57:53 2026] Launched synth_1... Run output will be captured here: D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1/runme.log [Wed Sep 16 23:57:53 2026] Launched impl_1... Run output will be captured here: D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 262ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 158 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+// [GUI Memory]: 106 MB (+5743kb) [00:51:39]
+dismissDialog("Open Hardware Manager"); // bx (ck)
+// Elapsed time: 17 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:42:52     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292BB33BEA 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// [Engine Memory]: 1,181 MB (+602189kb) [00:52:02]
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,184 MB. GUI used memory: 50 MB. Current time: 9/17/26 12:00:58 AM PKT
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 29 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constraints.xdc", 2); // k (j, ck)
+// Elapsed time: 48 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.sv", 0); // k (j, ck)
+// Elapsed time: 389 seconds
+selectCodeEditor("top.sv", 149, 142); // ce (w, ck)
+typeControlKey((HResource) null, "top.sv", 'v'); // ce (w, ck)
+selectCodeEditor("top.sv", 77, 267); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_CLOSE_DESIGN, "Close Hardware Manager"); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_DESIGN
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+// Tcl Message: close_hw 
+// bx (ck):  CLose Hardware Manager : addNotify
+dismissDialog("CLose Hardware Manager"); // bx (ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (top.sv), uut : fir_symmetric_pipelined (fir_symmetric_pipelined.sv)]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga_top (top.sv), uut : fir_symmetric_pipelined (fir_symmetric_pipelined.sv)]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("fir_symmetric_pipelined.sv", 188, 98); // ce (w, ck)
+typeControlKey((HResource) null, "fir_symmetric_pipelined.sv", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.sv", 0); // k (j, ck)
+selectCodeEditor("top.sv", 120, 112); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "input_samples.mem", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fir_symmetric_pipelined.sv", 3); // k (j, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Thu Sep 17 00:09:48 2026] Launched synth_1... Run output will be captured here: D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1/runme.log [Thu Sep 17 00:09:48 2026] Launched impl_1... Run output will be captured here: D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 114 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bx (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:42:52     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292BB33BEA 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bx (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 689 seconds
+selectCodeEditor("top.sv", 203, 113); // ce (w, ck)
+selectCodeEditor("top.sv", 204, 112); // ce (w, ck)
+typeControlKey((HResource) null, "top.sv", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Thu Sep 17 00:23:45 2026] Launched synth_1... Run output will be captured here: D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1/runme.log [Thu Sep 17 00:23:45 2026] Launched impl_1... Run output will be captured here: D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/runme.log 
+// Elapsed time: 16 seconds
+selectCodeEditor("top.sv", 146, 255); // ce (w, ck)
+selectCodeEditor("top.sv", 146, 255, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 157, 242); // ce (w, ck)
+selectCodeEditor("top.sv", 156, 242, false, false, false, false, true); // ce (w, ck) - Double Click
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 99 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bx (ck):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,472 MB. GUI used memory: 55 MB. Current time: 9/17/26 12:25:45 AM PKT
+// [Engine Memory]: 1,472 MB (+243815kb) [01:16:54]
+// [Engine Memory]: 1,608 MB (+65237kb) [01:16:59]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,676 MB. GUI used memory: 54 MB. Current time: 9/17/26 12:25:59 AM PKT
+// Elapsed time: 19 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (bx)
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_CLOSE
+// [Engine Memory]: 2,058 MB (+387130kb) [01:17:09]
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2018.2 INFO: [Device 21-403] Loading part xc7a100tcsg324-1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Common 17-41] Interrupt caught. Command should exit soon. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2378.785 ; gain = 0.000 open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2378.785 ; gain = 827.082 
+// Tcl Message: INFO: [Common 17-344] 'open_run' was cancelled 
+// CommandFailedException: ERROR: [Common 17-69] Command failed:  
+// 'dP' command handler elapsed time: 20 seconds
+dismissDialog("Open Implemented Design"); // bx (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 140 seconds
+selectCodeEditor("top.sv", 114, 71); // ce (w, ck)
+typeControlKey((HResource) null, "top.sv", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Thu Sep 17 00:28:36 2026] Launched synth_1... Run output will be captured here: D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1/runme.log [Thu Sep 17 00:28:36 2026] Launched impl_1... Run output will be captured here: D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 137 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 

@@ -2,10 +2,10 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Sep  9 22:28:21 2026
-# Process ID: 2660
+# Start of session at: Wed Sep 16 23:08:27 2026
+# Process ID: 10656
 # Current directory: D:/Vivado _projects/LS_FIR_FILTER
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6328 D:\Vivado _projects\LS_FIR_FILTER\LS_FIR_FILTER.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11492 D:\Vivado _projects\LS_FIR_FILTER\LS_FIR_FILTER.xpr
 # Log file: D:/Vivado _projects/LS_FIR_FILTER/vivado.log
 # Journal file: D:/Vivado _projects/LS_FIR_FILTER\vivado.jou
 #-----------------------------------------------------------
@@ -16,7 +16,4 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 817.648 ; gain = 81.258
-update_compile_order -fileset sources_1
-exit
-INFO: [Common 17-206] Exiting Vivado at Wed Sep  9 23:02:29 2026...
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:16 . Memory (MB): peak = 818.617 ; gain = 88.305
