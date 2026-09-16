@@ -668,3 +668,82 @@ dismissDialog("Program Device"); // bB (ck)
 // TclEventType: HW_DEVICE_CHANGE
 // Tcl Message: set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0] 
 // Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 1004 seconds
+selectCodeEditor("top.sv", 586, 80); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("top.sv", 465, 110); // ce (w, ck)
+selectCodeEditor("top.sv", 216, 96); // ce (w, ck)
+selectCodeEditor("top.sv", 515, 77); // ce (w, ck)
+selectCodeEditor("top.sv", 441, 55); // ce (w, ck)
+selectCodeEditor("top.sv", 158, 57); // ce (w, ck)
+selectCodeEditor("top.sv", 75, 59); // ce (w, ck)
+selectCodeEditor("top.sv", 163, 73); // ce (w, ck)
+selectCodeEditor("top.sv", 73, 75); // ce (w, ck)
+selectCodeEditor("top.sv", 71, 90); // ce (w, ck)
+selectCodeEditor("top.sv", 153, 95); // ce (w, ck)
+selectCodeEditor("top.sv", 113, 195); // ce (w, ck)
+selectCodeEditor("top.sv", 114, 209); // ce (w, ck)
+selectCodeEditor("top.sv", 115, 230); // ce (w, ck)
+selectCodeEditor("top.sv", 161, 192); // ce (w, ck)
+selectCodeEditor("top.sv", 176, 177); // ce (w, ck)
+selectCodeEditor("top.sv", 176, 177, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 176, 177); // ce (w, ck)
+selectCodeEditor("top.sv", 213, 193); // ce (w, ck)
+selectCodeEditor("top.sv", 213, 193, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 213, 193); // ce (w, ck)
+selectCodeEditor("top.sv", 228, 147); // ce (w, ck)
+selectCodeEditor("top.sv", 228, 147, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 228, 147); // ce (w, ck)
+selectCodeEditor("top.sv", 336, 206); // ce (w, ck)
+selectCodeEditor("top.sv", 336, 206, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 336, 206); // ce (w, ck)
+selectCodeEditor("top.sv", 222, 210); // ce (w, ck)
+selectCodeEditor("top.sv", 222, 210, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 222, 210); // ce (w, ck)
+selectCodeEditor("top.sv", 222, 210); // ce (w, ck)
+selectCodeEditor("top.sv", 221, 212); // ce (w, ck)
+selectCodeEditor("top.sv", 221, 212, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 221, 212); // ce (w, ck)
+selectCodeEditor("top.sv", 178, 242); // ce (w, ck)
+selectCodeEditor("top.sv", 365, 179); // ce (w, ck)
+selectCodeEditor("top.sv", 365, 179, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 365, 179); // ce (w, ck)
+selectCodeEditor("top.sv", 250, 159); // ce (w, ck)
+selectCodeEditor("top.sv", 250, 159, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 250, 159); // ce (w, ck)
+selectCodeEditor("top.sv", 250, 159); // ce (w, ck)
+selectCodeEditor("top.sv", 262, 145); // ce (w, ck)
+selectCodeEditor("top.sv", 262, 145, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("top.sv", 262, 145); // ce (w, ck)
+selectCodeEditor("top.sv", 210, 57); // ce (w, ck)
+selectCodeEditor("top.sv", 209, 74); // ce (w, ck)
+selectCodeEditor("top.sv", 211, 91); // ce (w, ck)
+selectCodeEditor("top.sv", 210, 144); // ce (w, ck)
+selectCodeEditor("top.sv", 148, 110); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("top.sv", 106, 193); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "input_samples.mem", 1); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constraints.xdc", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.sv", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fir_symmetric_pipelined.sv", 3); // k (j, ck)
+selectCodeEditor("fir_symmetric_pipelined.sv", 306, 65); // ce (w, ck)
+selectCodeEditor("fir_symmetric_pipelined.sv", 258, 71); // ce (w, ck)
+selectCodeEditor("fir_symmetric_pipelined.sv", 208, 162); // ce (w, ck)

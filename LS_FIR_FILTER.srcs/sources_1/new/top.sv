@@ -1,35 +1,29 @@
 `timescale 1ns / 1ps
 
-// ==============================================================================
-// 1. FIR FILTER TOP LEVEL (FPGA Wrapper)
-// ==============================================================================
 module fpga_top (
-    input  logic        clk,   // 100 MHz board clock (Pin E3)
-    input  logic        rst_n, // Active-low reset (Pin C12 - CPU_RESET)
-    input  logic [6:0]  sw,    // 7 slide switches for read address (0 to 99)
-    output logic [15:0] led    // 16 LEDs for Q(3,13) data output
+    input logic clk,   
+    input logic rst_n, 
+    input logic [6:0] sw,    
+    output logic [15:0] led    
 );
 
     localparam NUM_SAMPLES = 100;
     
-    logic [6:0]  us_counter;
-    logic [6:0]  write_addr;
-    logic        data_valid_in;
+    logic [6:0] us_counter;
+    logic [6:0] write_addr;
+    logic data_valid_in;
     logic signed [12:0] rom_data_out;
     
     logic signed [15:0] filter_data_out;
-    logic               filter_valid_out;
+    logic filter_valid_out;
 
     logic [15:0] input_rom  [0:NUM_SAMPLES-1];
     logic [15:0] output_ram [0:NUM_SAMPLES-1];
     
-    // --- Load the C++ Generated Input Samples (Absolute Path) ---
     initial begin
-        // Note the forward slashes and the exact folder name from your terminal
         $readmemh("D:/Vivado _projects/LS_FIR_FILTER/input_samples.txt", input_rom);
     end
 
-    // --- Microsecond Pulse Generator & Address Counter ---
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             us_counter <= '0;
@@ -46,7 +40,6 @@ module fpga_top (
                     data_valid_in <= 1'b0;
                 end
                 
-                // Increment address when filter finishes calculating a sample
                 if (filter_valid_out) begin
                     write_addr <= write_addr + 1'b1;
                 end
@@ -56,7 +49,6 @@ module fpga_top (
         end
     end
 
-    // --- FIR Filter Instantiation ---
     fir_symmetric_pipelined uut (
         .clk(clk),
         .rst_n(rst_n),
@@ -66,7 +58,6 @@ module fpga_top (
         .data_valid_out(filter_valid_out)
     );
 
-    // --- Dual-Port RAM (Write & Read) ---
     always_ff @(posedge clk) begin
         if (filter_valid_out) begin
             output_ram[write_addr] <= filter_data_out;
@@ -75,7 +66,7 @@ module fpga_top (
 
     always_ff @(posedge clk) begin
         if (sw >= NUM_SAMPLES) begin
-            led <= 16'd0; // Turn off LEDs if switch address is 100 or higher
+            led <= 16'd0;
         end else begin
             led <= output_ram[sw];
         end
@@ -84,16 +75,13 @@ module fpga_top (
 endmodule
 
 
-// ==============================================================================
-// 2. PIPELINED SYMMETRIC FIR FILTER MODULE
-// ==============================================================================
 module fir_symmetric_pipelined (
-    input  logic               clk,
-    input  logic               rst_n,
-    input  logic               data_valid_in, 
+    input  logic clk,
+    input  logic rst_n,
+    input  logic data_valid_in, 
     input  logic signed [12:0] data_in,       
     output logic signed [15:0] data_out,      
-    output logic               data_valid_out
+    output logic data_valid_out
 );
 
     localparam TAPS = 73;
@@ -119,7 +107,7 @@ module fir_symmetric_pipelined (
     end
 
     logic [5:0] read_addr;
-    logic       compute_en;
+    logic compute_en;
     logic [2:0] pipe_valid;
 
     logic signed [13:0] pre_add_reg; 
