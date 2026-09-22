@@ -2,8 +2,8 @@ module fir_symmetric_pipelined (
     input  logic               clk,
     input  logic               rst_n,
     input  logic               data_valid_in, 
-    input  logic signed [12:0] data_in,       
-    output logic signed [15:0] data_out,      
+    input  logic signed [12:0] data_in,   //1 sign bit, 2 integer bits, 10 fraction bits.    
+    output logic signed [15:0] data_out,  //Q(3,13)    
     output logic               data_valid_out
 );
 
@@ -29,21 +29,21 @@ module fir_symmetric_pipelined (
         coeff_rom[36] = 16'd16384; 
     end
 
-    logic [5:0] read_addr;
+    logic [5:0] read_addr; 
     logic       compute_en;
-    logic [2:0] pipe_valid;
+    logic [2:0] pipe_valid; //3-stage pipeline shift_register
 
-    logic signed [13:0] pre_add_reg; 
-    logic signed [15:0] coeff_reg;
-    logic signed [29:0] mult_reg;    
-    logic signed [35:0] accum_reg;   
+    logic signed [13:0] pre_add_reg; // 14 bits to cater overflow bit
+    logic signed [15:0] coeff_reg;  //16 bit as it is
+    logic signed [29:0] mult_reg;    //14+16 = 30 bits
+    logic signed [35:0] accum_reg;   //30 + 6 guard bits = 36 bits 
 
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             for (int i = 0; i < TAPS; i++) shift_reg[i] <= '0;
         end else if (data_valid_in) begin
             shift_reg[0] <= data_in;
-            for (int i = 1; i < TAPS; i++) shift_reg[i] <= shift_reg[i-1];
+            for (int i = 1; i < TAPS; i++) shift_reg[i] <= shift_reg[i-1]; //z-transform
         end
     end
 
@@ -53,10 +53,10 @@ module fir_symmetric_pipelined (
             compute_en <= 1'b0;
         end else begin
             if (data_valid_in) begin
-                compute_en <= 1'b1;
+                compute_en <= 1'b1; //after 1 micro second assert compute_en
                 read_addr  <= '0;
             end else if (compute_en) begin
-                if (read_addr == FOLDED_TAPS - 1) compute_en <= 1'b0; 
+                if (read_addr == FOLDED_TAPS - 1) compute_en <= 1'b0; //deasserting compute_en
                 else read_addr <= read_addr + 1'b1;
             end
         end
@@ -72,22 +72,25 @@ module fir_symmetric_pipelined (
             pipe_valid[1] <= pipe_valid[0];
             pipe_valid[2] <= pipe_valid[1];
 
+        //pipeline stage 1
             if (compute_en) begin
-                if (read_addr == 6'd36) pre_add_reg <= shift_reg[read_addr];
+                if (read_addr == 6'd36) pre_add_reg <= shift_reg[read_addr]; //centre tap
                 else pre_add_reg <= shift_reg[read_addr] + shift_reg[TAPS - 1 - read_addr];
                 coeff_reg <= coeff_rom[read_addr];
             end
-
+            
+        //pipeline stage 2
             if (pipe_valid[0]) mult_reg <= pre_add_reg * coeff_reg;
 
+        //pipeline stage 3
             data_valid_out <= 1'b0; 
             if (pipe_valid[1]) begin
-                if (!pipe_valid[2]) accum_reg <= mult_reg; 
-                else accum_reg <= accum_reg + mult_reg;
+                if (!pipe_valid[2]) accum_reg <= mult_reg; //this is for the first value in the accumulator
+                else accum_reg <= accum_reg + mult_reg; //this is for all the others added together
             end
 
             if (pipe_valid[2] && !pipe_valid[1]) begin
-                data_out <= accum_reg[26:11]; 
+                data_out <= accum_reg[26:11]; //truncation 
                 data_valid_out <= 1'b1;
             end
         end

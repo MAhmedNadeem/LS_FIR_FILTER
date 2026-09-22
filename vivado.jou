@@ -2,81 +2,12 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Sep 16 23:08:27 2026
-# Process ID: 10656
-# Current directory: D:/Vivado _projects/LS_FIR_FILTER
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11492 D:\Vivado _projects\LS_FIR_FILTER\LS_FIR_FILTER.xpr
-# Log file: D:/Vivado _projects/LS_FIR_FILTER/vivado.log
-# Journal file: D:/Vivado _projects/LS_FIR_FILTER\vivado.jou
+# Start of session at: Thu Sep 17 21:41:57 2026
+# Process ID: 18000
+# Current directory: C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10468 C:\Users\Ahmed Nadeem\Desktop\Chip Design and Verification\LS_FIR_FILTER\LS_FIR_FILTER.xpr
+# Log file: C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/vivado.log
+# Journal file: C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER\vivado.jou
 #-----------------------------------------------------------
-start_gui
-open_project {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.xpr}
-update_compile_order -fileset sources_1
-close [ open {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv} w ]
-add_files {{D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv}}
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-close [ open {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/input_samples.mem} w ]
-add_files {{D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/input_samples.mem}}
-file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1
-file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1
-file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new
-file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new
-file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new
-file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new
-file mkdir D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1
-file mkdir {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new}
-close [ open {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new/constraints.xdc} w ]
-add_files -fileset constrs_1 {{D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new/constraints.xdc}}
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-open_hw
-connect_hw_server
-open_hw_target
-set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0]
-current_hw_device [get_hw_devices xc7a100t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-close_hw
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-open_hw
-connect_hw_server
-open_hw_target
-set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0]
-current_hw_device [get_hw_devices xc7a100t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-open_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/impl_1/fpga_top.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+start_guioopen_project {C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.xpr}uupdate_compile_order -fileset sources_1
+open_bd_design {C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/bd/design_1/design_1.bd}

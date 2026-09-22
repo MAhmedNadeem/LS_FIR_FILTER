@@ -12,7 +12,18 @@ module tb_fir_symmetric_pipelined();
     logic signed [15:0] data_out;
     logic data_valid_out;
 
-    logic signed [15:0] input_rom [0:NUM_SAMPLES-1];
+    logic signed [15:0] input_rom [0:NUM_SAMPLES-1] = '{
+        16'h0000, 16'h0269, 16'h0073, 16'h0523, 16'h02a1, 16'h0400, 16'h04fb, 16'h0155, 16'h0441, 16'h000f,
+        16'h0000, 16'hfff1, 16'hfbbf, 16'hfeab, 16'hfb05, 16'hfc00, 16'hfd5f, 16'hfadd, 16'hff8d, 16'hfd97,
+        16'h0000, 16'h0269, 16'h0073, 16'h0523, 16'h02a1, 16'h0400, 16'h04fb, 16'h0155, 16'h0441, 16'h000f,
+        16'h0000, 16'hfff1, 16'hfbbf, 16'hfeab, 16'hfb05, 16'hfc00, 16'hfd5f, 16'hfadd, 16'hff8d, 16'hfd97,
+        16'h0000, 16'h0269, 16'h0073, 16'h0523, 16'h02a1, 16'h0400, 16'h04fb, 16'h0155, 16'h0441, 16'h000f,
+        16'h0000, 16'hfff1, 16'hfbbf, 16'hfeab, 16'hfb05, 16'hfc00, 16'hfd5f, 16'hfadd, 16'hff8d, 16'hfd97,
+        16'h0000, 16'h0269, 16'h0073, 16'h0523, 16'h02a1, 16'h0400, 16'h04fb, 16'h0155, 16'h0441, 16'h000f,
+        16'h0000, 16'hfff1, 16'hfbbf, 16'hfeab, 16'hfb05, 16'hfc00, 16'hfd5f, 16'hfadd, 16'hff8d, 16'hfd97,
+        16'h0000, 16'h0269, 16'h0073, 16'h0523, 16'h02a1, 16'h0400, 16'h04fb, 16'h0155, 16'h0441, 16'h000f,
+        16'h0000, 16'hfff1, 16'hfbbf, 16'hfeab, 16'hfb05, 16'hfc00, 16'hfd5f, 16'hfadd, 16'hff8d, 16'hfd97
+    };
     
     logic signed [15:0] expected_rom [0:NUM_SAMPLES-1] = '{
         16'h0000, 16'h007f, 16'h007d, 16'h01ae, 16'h0238, 16'h0382, 16'h0539, 16'h068e, 16'h092d, 16'h0b35,
@@ -31,9 +42,6 @@ module tb_fir_symmetric_pipelined();
     integer match_count = 0;
     integer error_count = 0;
     logic [6:0] us_counter; 
-    
-    real PI = 3.141592653589793;
-    real sample_float;
 
     fir_symmetric_pipelined uut (
         .clk(clk),
@@ -50,11 +58,6 @@ module tb_fir_symmetric_pipelined();
     end
 
     initial begin
-        for (int i = 0; i < NUM_SAMPLES; i++) begin
-            sample_float = 1.0 * $sin(2.0 * PI * 0.05 * i) + 0.5 * $sin(2.0 * PI * 0.4 * i);
-            input_rom[i] = $rtoi(sample_float * 1024.0);
-        end
-
         rst_n = 0;
 
         #(CLK_PERIOD * 10);

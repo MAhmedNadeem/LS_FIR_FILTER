@@ -2,12 +2,12 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Sep 17 00:28:37 2026
-# Process ID: 12488
-# Current directory: D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1
+# Start of session at: Wed Sep 23 00:31:34 2026
+# Process ID: 8972
+# Current directory: C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1
 # Command line: vivado.exe -log fpga_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fpga_top.tcl
-# Log file: D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1/fpga_top.vds
-# Journal file: D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1\vivado.jou
+# Log file: C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1/fpga_top.vds
+# Journal file: C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source fpga_top.tcl -notrace
 Command: synth_design -top fpga_top -part xc7a100tcsg324-1
@@ -15,21 +15,127 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2148 
+INFO: Helper process launched with PID 3916 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 356.469 ; gain = 99.605
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 408.543 ; gain = 96.699
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'fpga_top' [D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'fpga_top' [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:3]
 	Parameter NUM_SAMPLES bound to: 100 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'D:/Vivado _projects/LS_FIR_FILTER/input_samples.txt' is read successfully [D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:29]
-INFO: [Synth 8-6157] synthesizing module 'fir_symmetric_pipelined' [D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:90]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D:/Vivado _projects/LS_FIR_FILTER/input_samples.txt'; please make sure the file is added to project and has read permission, ignoring [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'fir_symmetric_pipelined' [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/fir_symmetric_pipelined.sv:1]
 	Parameter TAPS bound to: 73 - type: integer 
 	Parameter FOLDED_TAPS bound to: 37 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'fir_symmetric_pipelined' (1#1) [D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:90]
-WARNING: [Synth 8-5788] Register rom_data_out_reg in module fpga_top is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:43]
-INFO: [Synth 8-6155] done synthesizing module 'fpga_top' (2#1) [D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'fir_symmetric_pipelined' (1#1) [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/fir_symmetric_pipelined.sv:1]
+WARNING: [Synth 8-5788] Register rom_data_out_reg in module fpga_top is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:37]
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net input_rom in module/entity fpga_top does not have driver. [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:20]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'fpga_top' (2#1) [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 411.555 ; gain = 154.691
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 463.266 ; gain = 151.422
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -42,48 +148,48 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 411.555 ; gain = 154.691
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 463.266 ; gain = 151.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 411.555 ; gain = 154.691
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 463.266 ; gain = 151.422
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new/constraints.xdc]
-Finished Parsing XDC File [D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new/constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fpga_top_propImpl.xdc].
+Parsing XDC File [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fpga_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/fpga_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 768.281 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 815.617 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 768.281 ; gain = 511.418
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 815.617 ; gain = 503.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 768.281 ; gain = 511.418
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 815.617 ; gain = 503.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 768.281 ; gain = 511.418
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 815.617 ; gain = 503.773
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "read_addr" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "compute_en" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "data_valid_in" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "rom_data_out" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 768.281 ; gain = 511.418
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 815.617 ; gain = 503.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -97,14 +203,14 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     14 Bit       Adders := 1     
-	   2 Input      7 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 2     
 	   2 Input      6 Bit       Adders := 1     
 +---Registers : 
 	               30 Bit    Registers := 1     
 	               16 Bit    Registers := 3     
 	               14 Bit    Registers := 1     
 	               13 Bit    Registers := 74    
-	                7 Bit    Registers := 3     
+	                7 Bit    Registers := 2     
 	                6 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 3     
@@ -124,11 +230,11 @@ Hierarchical RTL Component report
 Module fpga_top 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      7 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 2     
 +---Registers : 
 	               16 Bit    Registers := 1     
 	               13 Bit    Registers := 1     
-	                7 Bit    Registers := 3     
+	                7 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---RAMs : 
 	               1K Bit         RAMs := 1     
@@ -172,87 +278,184 @@ DSP Report: operator mult_reg0 is absorbed into DSP mult_reg0.
 INFO: [Synth 8-5546] ROM "data_valid_in" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "rom_data_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM output_ram_reg to conserve power
+INFO: [Synth 8-3886] merging instance 'rom_data_out_reg[0]' (FDE) to 'rom_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'rom_data_out_reg[1]' (FDE) to 'rom_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'rom_data_out_reg[2]' (FDE) to 'rom_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'rom_data_out_reg[3]' (FDE) to 'rom_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'rom_data_out_reg[4]' (FDE) to 'rom_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'rom_data_out_reg[5]' (FDE) to 'rom_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'rom_data_out_reg[6]' (FDE) to 'rom_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'rom_data_out_reg[7]' (FDE) to 'rom_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'rom_data_out_reg[8]' (FDE) to 'rom_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'rom_data_out_reg[9]' (FDE) to 'rom_data_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'rom_data_out_reg[10]' (FDE) to 'rom_data_out_reg[12]'
 INFO: [Synth 8-3886] merging instance 'rom_data_out_reg[11]' (FDE) to 'rom_data_out_reg[12]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[0][11]' (FDCE) to 'uut/shift_reg_reg[0][12]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[1][11]' (FDCE) to 'uut/shift_reg_reg[1][12]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[2][11]' (FDCE) to 'uut/shift_reg_reg[2][12]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[3][11]' (FDCE) to 'uut/shift_reg_reg[3][12]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[4][11]' (FDCE) to 'uut/shift_reg_reg[4][12]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[5][11]' (FDCE) to 'uut/shift_reg_reg[5][12]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[6][11]' (FDCE) to 'uut/shift_reg_reg[6][12]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[7][11]' (FDCE) to 'uut/shift_reg_reg[7][12]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[8][11]' (FDCE) to 'uut/shift_reg_reg[8][12]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[9][12]' (FDCE) to 'uut/shift_reg_reg[9][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[10][12]' (FDCE) to 'uut/shift_reg_reg[10][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[11][12]' (FDCE) to 'uut/shift_reg_reg[11][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[12][12]' (FDCE) to 'uut/shift_reg_reg[12][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[13][12]' (FDCE) to 'uut/shift_reg_reg[13][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[14][12]' (FDCE) to 'uut/shift_reg_reg[14][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[15][12]' (FDCE) to 'uut/shift_reg_reg[15][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[16][12]' (FDCE) to 'uut/shift_reg_reg[16][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[17][12]' (FDCE) to 'uut/shift_reg_reg[17][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[18][12]' (FDCE) to 'uut/shift_reg_reg[18][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[19][12]' (FDCE) to 'uut/shift_reg_reg[19][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[20][12]' (FDCE) to 'uut/shift_reg_reg[20][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[21][12]' (FDCE) to 'uut/shift_reg_reg[21][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[22][12]' (FDCE) to 'uut/shift_reg_reg[22][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[23][12]' (FDCE) to 'uut/shift_reg_reg[23][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[24][12]' (FDCE) to 'uut/shift_reg_reg[24][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[25][12]' (FDCE) to 'uut/shift_reg_reg[25][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[26][12]' (FDCE) to 'uut/shift_reg_reg[26][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[27][12]' (FDCE) to 'uut/shift_reg_reg[27][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[28][12]' (FDCE) to 'uut/shift_reg_reg[28][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[29][12]' (FDCE) to 'uut/shift_reg_reg[29][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[30][12]' (FDCE) to 'uut/shift_reg_reg[30][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[31][12]' (FDCE) to 'uut/shift_reg_reg[31][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[32][12]' (FDCE) to 'uut/shift_reg_reg[32][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[33][12]' (FDCE) to 'uut/shift_reg_reg[33][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[34][12]' (FDCE) to 'uut/shift_reg_reg[34][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[35][12]' (FDCE) to 'uut/shift_reg_reg[35][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[36][12]' (FDCE) to 'uut/shift_reg_reg[36][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[37][12]' (FDCE) to 'uut/shift_reg_reg[37][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[38][12]' (FDCE) to 'uut/shift_reg_reg[38][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[39][12]' (FDCE) to 'uut/shift_reg_reg[39][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[40][12]' (FDCE) to 'uut/shift_reg_reg[40][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[41][12]' (FDCE) to 'uut/shift_reg_reg[41][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[42][12]' (FDCE) to 'uut/shift_reg_reg[42][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[43][12]' (FDCE) to 'uut/shift_reg_reg[43][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[44][12]' (FDCE) to 'uut/shift_reg_reg[44][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[45][12]' (FDCE) to 'uut/shift_reg_reg[45][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[46][12]' (FDCE) to 'uut/shift_reg_reg[46][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[47][12]' (FDCE) to 'uut/shift_reg_reg[47][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[48][12]' (FDCE) to 'uut/shift_reg_reg[48][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[49][12]' (FDCE) to 'uut/shift_reg_reg[49][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[50][12]' (FDCE) to 'uut/shift_reg_reg[50][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[51][12]' (FDCE) to 'uut/shift_reg_reg[51][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[52][12]' (FDCE) to 'uut/shift_reg_reg[52][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[53][12]' (FDCE) to 'uut/shift_reg_reg[53][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[54][12]' (FDCE) to 'uut/shift_reg_reg[54][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[55][12]' (FDCE) to 'uut/shift_reg_reg[55][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[56][12]' (FDCE) to 'uut/shift_reg_reg[56][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[57][12]' (FDCE) to 'uut/shift_reg_reg[57][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[58][12]' (FDCE) to 'uut/shift_reg_reg[58][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[59][12]' (FDCE) to 'uut/shift_reg_reg[59][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[60][12]' (FDCE) to 'uut/shift_reg_reg[60][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[61][12]' (FDCE) to 'uut/shift_reg_reg[61][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[62][12]' (FDCE) to 'uut/shift_reg_reg[62][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[63][12]' (FDCE) to 'uut/shift_reg_reg[63][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[64][12]' (FDCE) to 'uut/shift_reg_reg[64][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[65][12]' (FDCE) to 'uut/shift_reg_reg[65][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[66][12]' (FDCE) to 'uut/shift_reg_reg[66][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[67][12]' (FDCE) to 'uut/shift_reg_reg[67][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[68][12]' (FDCE) to 'uut/shift_reg_reg[68][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[69][12]' (FDCE) to 'uut/shift_reg_reg[69][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[70][12]' (FDCE) to 'uut/shift_reg_reg[70][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[71][12]' (FDCE) to 'uut/shift_reg_reg[71][11]'
-INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[72][12]' (FDCE) to 'uut/shift_reg_reg[72][11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rom_data_out_reg[12] )
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[0][0]' (FDCE) to 'uut/shift_reg_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[1][0]' (FDCE) to 'uut/shift_reg_reg[1][1]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[2][0]' (FDCE) to 'uut/shift_reg_reg[2][1]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[3][0]' (FDCE) to 'uut/shift_reg_reg[3][1]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[4][0]' (FDCE) to 'uut/shift_reg_reg[4][1]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[5][0]' (FDCE) to 'uut/shift_reg_reg[5][1]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[6][0]' (FDCE) to 'uut/shift_reg_reg[6][1]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[7][0]' (FDCE) to 'uut/shift_reg_reg[7][1]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[8][0]' (FDCE) to 'uut/shift_reg_reg[8][1]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[9][1]' (FDCE) to 'uut/shift_reg_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[10][1]' (FDCE) to 'uut/shift_reg_reg[10][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[11][1]' (FDCE) to 'uut/shift_reg_reg[11][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[12][1]' (FDCE) to 'uut/shift_reg_reg[12][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[13][1]' (FDCE) to 'uut/shift_reg_reg[13][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[14][1]' (FDCE) to 'uut/shift_reg_reg[14][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[15][1]' (FDCE) to 'uut/shift_reg_reg[15][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[16][1]' (FDCE) to 'uut/shift_reg_reg[16][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[17][1]' (FDCE) to 'uut/shift_reg_reg[17][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[18][1]' (FDCE) to 'uut/shift_reg_reg[18][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[19][1]' (FDCE) to 'uut/shift_reg_reg[19][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[20][1]' (FDCE) to 'uut/shift_reg_reg[20][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[21][1]' (FDCE) to 'uut/shift_reg_reg[21][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[22][1]' (FDCE) to 'uut/shift_reg_reg[22][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[23][1]' (FDCE) to 'uut/shift_reg_reg[23][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[24][1]' (FDCE) to 'uut/shift_reg_reg[24][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[25][1]' (FDCE) to 'uut/shift_reg_reg[25][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[26][1]' (FDCE) to 'uut/shift_reg_reg[26][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[27][1]' (FDCE) to 'uut/shift_reg_reg[27][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[28][1]' (FDCE) to 'uut/shift_reg_reg[28][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[29][1]' (FDCE) to 'uut/shift_reg_reg[29][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[30][1]' (FDCE) to 'uut/shift_reg_reg[30][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[31][1]' (FDCE) to 'uut/shift_reg_reg[31][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[32][1]' (FDCE) to 'uut/shift_reg_reg[32][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[33][1]' (FDCE) to 'uut/shift_reg_reg[33][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[34][1]' (FDCE) to 'uut/shift_reg_reg[34][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[35][1]' (FDCE) to 'uut/shift_reg_reg[35][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[36][1]' (FDCE) to 'uut/shift_reg_reg[36][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[37][1]' (FDCE) to 'uut/shift_reg_reg[37][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[38][1]' (FDCE) to 'uut/shift_reg_reg[38][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[39][1]' (FDCE) to 'uut/shift_reg_reg[39][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[40][1]' (FDCE) to 'uut/shift_reg_reg[40][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[41][1]' (FDCE) to 'uut/shift_reg_reg[41][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[42][1]' (FDCE) to 'uut/shift_reg_reg[42][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[43][1]' (FDCE) to 'uut/shift_reg_reg[43][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[44][1]' (FDCE) to 'uut/shift_reg_reg[44][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[45][1]' (FDCE) to 'uut/shift_reg_reg[45][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[46][1]' (FDCE) to 'uut/shift_reg_reg[46][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[47][1]' (FDCE) to 'uut/shift_reg_reg[47][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[48][1]' (FDCE) to 'uut/shift_reg_reg[48][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[49][1]' (FDCE) to 'uut/shift_reg_reg[49][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[50][1]' (FDCE) to 'uut/shift_reg_reg[50][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[51][1]' (FDCE) to 'uut/shift_reg_reg[51][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[52][1]' (FDCE) to 'uut/shift_reg_reg[52][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[53][1]' (FDCE) to 'uut/shift_reg_reg[53][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[54][1]' (FDCE) to 'uut/shift_reg_reg[54][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[55][1]' (FDCE) to 'uut/shift_reg_reg[55][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[56][1]' (FDCE) to 'uut/shift_reg_reg[56][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[57][1]' (FDCE) to 'uut/shift_reg_reg[57][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[58][1]' (FDCE) to 'uut/shift_reg_reg[58][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[59][1]' (FDCE) to 'uut/shift_reg_reg[59][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[60][1]' (FDCE) to 'uut/shift_reg_reg[60][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[61][1]' (FDCE) to 'uut/shift_reg_reg[61][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[62][1]' (FDCE) to 'uut/shift_reg_reg[62][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[63][1]' (FDCE) to 'uut/shift_reg_reg[63][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[64][1]' (FDCE) to 'uut/shift_reg_reg[64][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[65][1]' (FDCE) to 'uut/shift_reg_reg[65][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[66][1]' (FDCE) to 'uut/shift_reg_reg[66][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[67][1]' (FDCE) to 'uut/shift_reg_reg[67][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[68][1]' (FDCE) to 'uut/shift_reg_reg[68][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[69][1]' (FDCE) to 'uut/shift_reg_reg[69][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[70][1]' (FDCE) to 'uut/shift_reg_reg[70][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[71][1]' (FDCE) to 'uut/shift_reg_reg[71][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[72][1]' (FDCE) to 'uut/shift_reg_reg[72][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[0][1]' (FDCE) to 'uut/shift_reg_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[1][1]' (FDCE) to 'uut/shift_reg_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[2][1]' (FDCE) to 'uut/shift_reg_reg[2][2]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[3][1]' (FDCE) to 'uut/shift_reg_reg[3][2]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[4][1]' (FDCE) to 'uut/shift_reg_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[5][1]' (FDCE) to 'uut/shift_reg_reg[5][2]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[6][1]' (FDCE) to 'uut/shift_reg_reg[6][2]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[7][1]' (FDCE) to 'uut/shift_reg_reg[7][2]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[8][1]' (FDCE) to 'uut/shift_reg_reg[8][2]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[9][2]' (FDCE) to 'uut/shift_reg_reg[9][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[10][2]' (FDCE) to 'uut/shift_reg_reg[10][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[11][2]' (FDCE) to 'uut/shift_reg_reg[11][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[12][2]' (FDCE) to 'uut/shift_reg_reg[12][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[13][2]' (FDCE) to 'uut/shift_reg_reg[13][0]'
+INFO: [Synth 8-3886] merging instance 'uut/shift_reg_reg[14][2]' (FDCE) to 'uut/shift_reg_reg[14][0]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/coeff_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/shift_reg_reg[9][0] )
+WARNING: [Synth 8-3332] Sequential element (uut/pre_add_reg_reg[13]) is unused and will be removed from module fpga_top.
 WARNING: [Synth 8-3332] Sequential element (uut/coeff_reg_reg[15]) is unused and will be removed from module fpga_top.
 WARNING: [Synth 8-3332] Sequential element (uut/mult_reg_reg[29]) is unused and will be removed from module fpga_top.
 WARNING: [Synth 8-3332] Sequential element (uut/mult_reg_reg[28]) is unused and will be removed from module fpga_top.
 WARNING: [Synth 8-3332] Sequential element (uut/mult_reg_reg[27]) is unused and will be removed from module fpga_top.
+WARNING: [Synth 8-3332] Sequential element (uut/shift_reg_reg[9][0]) is unused and will be removed from module fpga_top.
+WARNING: [Synth 8-3332] Sequential element (rom_data_out_reg[12]) is unused and will be removed from module fpga_top.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uut/pre_add_reg_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (uut/pre_add_reg_reg[0]) is unused and will be removed from module fpga_top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 768.281 ; gain = 511.418
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 815.617 ; gain = 503.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -263,9 +466,7 @@ ROM:
 |Module Name             | RTL Object | Depth x Width | Implemented As | 
 +------------------------+------------+---------------+----------------+
 |fir_symmetric_pipelined | p_0_out    | 64x16         | LUT            | 
-|fpga_top                | p_0_out    | 128x16        | LUT            | 
 |fir_symmetric_pipelined | p_0_out    | 64x16         | LUT            | 
-|fpga_top                | p_0_out    | 128x16        | LUT            | 
 +------------------------+------------+---------------+----------------+
 
 
@@ -290,8 +491,7 @@ Note: The table above is a preliminary report that shows the DSPs inferred at th
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4480] The timing for the instance i_1/output_ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:156]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:156]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/fir_symmetric_pipelined.sv:67]
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -302,13 +502,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 804.453 ; gain = 547.590
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 852.590 ; gain = 540.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 807.320 ; gain = 550.457
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 853.336 ; gain = 541.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -333,12 +533,11 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:156]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:156]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/top.sv:156]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/fir_symmetric_pipelined.sv:67]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.srcs/sources_1/new/fir_symmetric_pipelined.sv:67]
 INFO: [Synth 8-4480] The timing for the instance output_ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 832.211 ; gain = 575.348
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 873.129 ; gain = 561.285
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -362,7 +561,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 832.211 ; gain = 575.348
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 873.129 ; gain = 561.285
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -375,7 +574,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 832.211 ; gain = 575.348
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 873.129 ; gain = 561.285
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -387,25 +586,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 832.211 ; gain = 575.348
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 873.129 ; gain = 561.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 832.211 ; gain = 575.348
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 873.129 ; gain = 561.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 832.211 ; gain = 575.348
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 873.129 ; gain = 561.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 832.211 ; gain = 575.348
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 873.129 ; gain = 561.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -422,51 +621,47 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |BUFG     |     1|
-|2     |CARRY4   |    11|
+|2     |CARRY4   |     7|
 |3     |DSP48E1  |     1|
 |4     |LUT1     |     3|
-|5     |LUT2     |     9|
-|6     |LUT3     |    52|
+|5     |LUT2     |     6|
+|6     |LUT3     |    31|
 |7     |LUT4     |    34|
-|8     |LUT5     |    31|
-|9     |LUT6     |   479|
-|10    |MUXF7    |   196|
-|11    |MUXF8    |    44|
-|12    |RAMB18E1 |     1|
-|13    |FDCE     |   988|
-|14    |FDRE     |    12|
-|15    |IBUF     |     9|
-|16    |OBUF     |    16|
+|8     |LUT5     |     7|
+|9     |LUT6     |    21|
+|10    |RAMB18E1 |     1|
+|11    |FDCE     |    85|
+|12    |IBUF     |     9|
+|13    |OBUF     |    16|
 +------+---------+------+
 
 Report Instance Areas: 
 +------+---------+------------------------+------+
 |      |Instance |Module                  |Cells |
 +------+---------+------------------------+------+
-|1     |top      |                        |  1887|
-|2     |  uut    |fir_symmetric_pipelined |  1772|
+|1     |top      |                        |   222|
+|2     |  uut    |fir_symmetric_pipelined |   159|
 +------+---------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 832.211 ; gain = 575.348
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 873.129 ; gain = 561.285
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 832.211 ; gain = 218.621
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 832.211 ; gain = 575.348
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 873.129 ; gain = 208.934
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 873.129 ; gain = 561.285
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 262 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'fpga_top' is not ideal for floorplanning, since the cellview 'fir_symmetric_pipelined' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-106 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+197 Infos, 109 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 832.211 ; gain = 588.184
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 873.129 ; gain = 574.453
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'D:/Vivado _projects/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1/fpga_top.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Ahmed Nadeem/Desktop/Chip Design and Verification/LS_FIR_FILTER/LS_FIR_FILTER.runs/synth_1/fpga_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file fpga_top_utilization_synth.rpt -pb fpga_top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 832.211 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 17 00:29:09 2026...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 873.129 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 23 00:32:23 2026...
